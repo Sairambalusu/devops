@@ -43,5 +43,5 @@ p    {color: red;}
     SourcePath: '.'
     azureSubscription: 'Free Trial(878ee711-ef72-4316-8df4-dcf974449d36)'
     Destination: 'AzureBlob'
-    storage: 'demo223344'
+    storage: 'demo1425'
     ContainerName: '$web'
