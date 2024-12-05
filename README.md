@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>www.sairam.com</title>
+  www.sairam.com
   <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 <body>
