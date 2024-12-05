@@ -1,0 +1,48 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+ #vmImage: ubuntu-latest
+ name: 'selfpool'  
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+  <html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+<body>
+
+<h1>This is a sairam</h1>
+<p>This is a demo.</p>
+
+</body>
+</html>
+
+# Step 1: Install Azure CLI (required to interact with Azure)
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'Free Trial(878ee711-ef72-4316-8df4-dcf974449d36)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      echo "Installing Azure CLI"
+      curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+
+
+- task: AzureFileCopy@6
+  inputs:
+    SourcePath: '.'
+    azureSubscription: 'Free Trial(878ee711-ef72-4316-8df4-dcf974449d36)'
+    Destination: 'AzureBlob'
+    storage: 'demo1425'
+    ContainerName: '$web'
